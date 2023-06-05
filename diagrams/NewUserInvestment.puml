@@ -1,0 +1,24 @@
+@startuml
+autonumber
+
+actor Alice as fe
+
+box "Perpvert"
+    participant contract as cc
+end box
+
+box "Injective"
+    participant exchange as ex    
+end box
+
+==== NEW INVESTMENT ====
+fe -> cc: CreateNewInvestment(postion_USDT)
+cc -> cc: RandomizePositionAndStoreNewInvestment()
+cc --> fe: success
+
+
+
+==== QUERIES ====
+
+
+@enduml
